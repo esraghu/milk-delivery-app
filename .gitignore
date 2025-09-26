@@ -1,0 +1,10 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+
+# Node
+client/node_modules
+
+# Database
+delivery_app.db

@@ -1,0 +1,287 @@
+/* Farm Theme - DailyDoodh */
+
+/* Root Variables for Farm Theme */
+:root {
+  --farm-green: #4a7c59;
+  --grass-green: #7db46c;
+  --sky-blue: #87ceeb;
+  --cloud-white: #f8f9fa;
+  --barn-red: #cc5500;
+  --cow-brown: #8b4513;
+  --milk-white: #fffef7;
+  --dirt-brown: #8b7355;
+  --sun-yellow: #ffd700;
+  --flower-pink: #ffb6c1;
+}
+
+/* Background and Body */
+body {
+  background: linear-gradient(to bottom, 
+    var(--sky-blue) 0%, 
+    var(--sky-blue) 70%, 
+    var(--grass-green) 70%, 
+    var(--farm-green) 100%);
+  min-height: 100vh;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  margin: 0;
+}
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Farm Clouds Animation */
+.App::before {
+  content: '☁️ ☁️ ☁️';
+  position: fixed;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  font-size: 2rem;
+  z-index: -1;
+  animation: drift 30s infinite linear;
+  opacity: 0.7;
+}
+
+@keyframes drift {
+  0% { transform: translateX(-100px); }
+  100% { transform: translateX(100vw); }
+}
+
+/* Navigation Bar - Barn Theme */
+.navbar {
+  background: linear-gradient(135deg, var(--barn-red) 0%, #a0522d 100%) !important;
+  border-bottom: 3px solid var(--cow-brown);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.8rem !important;
+  color: var(--milk-white) !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.navbar-brand::before {
+  content: '🐄 ';
+}
+
+.navbar-brand::after {
+  content: ' 🚜';
+}
+
+/* Cards - Farmhouse Style */
+.card {
+  background: var(--milk-white);
+  border: 2px solid var(--dirt-brown);
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  margin-bottom: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--grass-green), var(--farm-green), var(--grass-green));
+}
+
+.card-header {
+  background: linear-gradient(135deg, var(--grass-green), var(--farm-green));
+  color: white;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+  border-bottom: 2px solid var(--dirt-brown);
+}
+
+/* Buttons - Farm Theme */
+.btn-primary {
+  background: linear-gradient(135deg, var(--grass-green), var(--farm-green));
+  border: 2px solid var(--dirt-brown);
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--farm-green), var(--grass-green));
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+.btn-success {
+  background: linear-gradient(135deg, var(--barn-red), #cc5500);
+  border: 2px solid var(--cow-brown);
+  font-weight: bold;
+}
+
+.btn-success:hover {
+  background: linear-gradient(135deg, #cc5500, var(--barn-red));
+  transform: translateY(-2px);
+}
+
+.btn-outline-light {
+  border-color: var(--milk-white);
+  color: var(--milk-white);
+  font-weight: bold;
+}
+
+.btn-outline-light:hover {
+  background-color: var(--milk-white);
+  color: var(--barn-red);
+}
+
+/* Form Controls */
+.form-control {
+  border: 2px solid var(--dirt-brown);
+  border-radius: 8px;
+  background-color: var(--milk-white);
+}
+
+.form-control:focus {
+  border-color: var(--grass-green);
+  box-shadow: 0 0 8px rgba(123, 180, 108, 0.3);
+}
+
+.form-label {
+  font-weight: bold;
+  color: var(--cow-brown);
+}
+
+/* Tables */
+.table {
+  background-color: var(--milk-white);
+}
+
+.table th {
+  background-color: var(--grass-green);
+  color: white;
+  border: none;
+}
+
+.table td {
+  border-color: var(--dirt-brown);
+}
+
+/* Badges */
+.badge {
+  font-size: 0.9rem;
+  padding: 0.5rem 0.8rem;
+}
+
+.bg-primary {
+  background-color: var(--grass-green) !important;
+}
+
+.bg-success {
+  background-color: var(--farm-green) !important;
+}
+
+.bg-info {
+  background-color: var(--sky-blue) !important;
+  color: var(--cow-brown) !important;
+}
+
+/* Alerts */
+.alert-info {
+  background-color: rgba(135, 206, 235, 0.2);
+  border-color: var(--sky-blue);
+  color: var(--cow-brown);
+}
+
+.alert-danger {
+  background-color: rgba(204, 85, 0, 0.2);
+  border-color: var(--barn-red);
+  color: var(--barn-red);
+}
+
+/* Loading Spinner */
+.spinner-border {
+  color: var(--grass-green);
+}
+
+/* Container Styling */
+.container {
+  position: relative;
+}
+
+/* Grass Effect at Bottom */
+.container::after {
+  content: '🌱🌿🌱🌿🌱🌿🌱🌿🌱🌿🌱🌿🌱🌿🌱🌿🌱🌿🌱🌿';
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-size: 1.5rem;
+  z-index: -1;
+  opacity: 0.6;
+  background: linear-gradient(to top, var(--farm-green), transparent);
+  padding: 10px 0;
+}
+
+/* Welcome Page Special Styling */
+.welcome-section {
+  background: rgba(248, 249, 250, 0.9);
+  border-radius: 20px;
+  padding: 2rem;
+  margin: 2rem 0;
+  border: 3px solid var(--dirt-brown);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.welcome-section::before {
+  content: '🐄 🌾 🚜 🌾 🐄';
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--milk-white);
+  padding: 0 20px;
+  font-size: 1.5rem;
+  border-radius: 20px;
+  border: 2px solid var(--dirt-brown);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-brand {
+    font-size: 1.4rem !important;
+  }
+  
+  .container::after {
+    font-size: 1rem;
+  }
+  
+  .App::before {
+    font-size: 1.5rem;
+  }
+}
+
+/* Hover Effects */
+.card:hover {
+  transform: translateY(-3px);
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+/* List Groups */
+.list-group-item {
+  border-color: var(--dirt-brown);
+  background-color: var(--milk-white);
+}
+
+.list-group-item:hover {
+  background-color: rgba(123, 180, 108, 0.1);
+}
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
