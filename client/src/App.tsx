@@ -60,7 +60,7 @@ function App() {
   // Render different views
   if (currentView === 'login') {
     return (
-      <div className="App">
+      <div className="App-container">
         <Login 
           onLoginSuccess={handleLoginSuccess}
           onCancel={resetToHome}
@@ -72,7 +72,7 @@ function App() {
 
   if (currentView === 'signup') {
     return (
-      <div className="App">
+      <div className="App-container">
         <Signup 
           onSignupSuccess={handleSignupSuccess} 
           onCancel={resetToHome}
@@ -84,7 +84,7 @@ function App() {
 
   if (currentView === 'delivery-signup') {
     return (
-      <div className="App">
+      <div className="App-container">
         <DeliverySignup 
           onSignupSuccess={handleSignupSuccess} 
           onCancel={resetToHome}
@@ -95,7 +95,7 @@ function App() {
 
   return (
     <div className="App">
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+      <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
         <div className="container">
           <a className="navbar-brand" href="#">DailyDoodh</a>
           <div className="navbar-nav ms-auto d-flex align-items-center">
