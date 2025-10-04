@@ -3,11 +3,9 @@ from sqlalchemy.orm import Session
 from typing import List
 from datetime import date
 
-from .database import engine, get_db
-from .db_models import Base, User as DBUser, Product as DBProduct, Subscription as DBSubscription, \
-    SubscriptionItem as DBSubscriptionItem, Order as DBOrder, OrderItem as DBOrderItem, \
-    Vacation as DBVacation, Cancellation as DBCancellation
-from .models import (
+from database import engine, get_db
+from db_models import Base, User as DBUser, Product as DBProduct, Subscription as DBSubscription,     SubscriptionItem as DBSubscriptionItem, Order as DBOrder, OrderItem as DBOrderItem,     Vacation as DBVacation, Cancellation as DBCancellation
+from models import (
     User, UserLogin, UserCreate, Product, Subscription, SubscriptionCreate, 
     Order, OrderCreate, Vacation, VacationCreate, Cancellation, CancellationCreate
 )
