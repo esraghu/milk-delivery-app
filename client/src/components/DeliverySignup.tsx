@@ -52,7 +52,7 @@ const DeliverySignup: React.FC<DeliverySignupProps> = ({ onSignupSuccess, onCanc
         <div className="col-md-6">
           <div className="card">
             <div className="card-header bg-success text-white">
-              <h4 className="mb-0">🚚 Join as Farm Delivery Partner</h4>
+              <h4 className="mb-0">🚚 Join as Delivery Partner</h4>
             </div>
             <div className="card-body">
               {error && (
@@ -89,7 +89,7 @@ const DeliverySignup: React.FC<DeliverySignupProps> = ({ onSignupSuccess, onCanc
                 </div>
 
                 <div className="mb-3">
-                  <label htmlFor="house_number" className="form-label">🚚 Delivery Vehicle/Route ID *</label>
+                  <label htmlFor="house_number" className="form-label">🚚 Vehicle/Partner ID *</label>
                   <input
                     type="text"
                     className="form-control"
@@ -97,7 +97,7 @@ const DeliverySignup: React.FC<DeliverySignupProps> = ({ onSignupSuccess, onCanc
                     name="house_number"
                     value={formData.house_number}
                     onChange={handleInputChange}
-                    placeholder="e.g., MH12AB1234, FARM001"
+                    placeholder="e.g., KA05AB1234, DD001"
                     required
                   />
                 </div>
@@ -118,7 +118,7 @@ const DeliverySignup: React.FC<DeliverySignupProps> = ({ onSignupSuccess, onCanc
 
                 <div className="alert alert-info">
                   <small>
-                    <strong>🌾 Note:</strong> As a farm delivery partner, you'll have access to daily farm-to-door routes and customer farmhouse information.
+                    <strong>🚚 Note:</strong> As a delivery partner, you'll collect dairy products from distribution centers and deliver to subscribers on assigned routes.
                   </small>
                 </div>
 
@@ -128,7 +128,7 @@ const DeliverySignup: React.FC<DeliverySignupProps> = ({ onSignupSuccess, onCanc
                     className="btn btn-success"
                     disabled={loading}
                   >
-                    {loading ? '🐄 Joining the farm team...' : '🚚 Become Farm Delivery Partner'}
+                    {loading ? '🚚 Registering...' : '🚚 Become Delivery Partner'}
                   </button>
                   <button 
                     type="button" 

@@ -97,20 +97,20 @@ function App() {
     <div className="App">
       <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
         <div className="container">
-          <a className="navbar-brand" href="#">🐄 MooFresh Farm</a>
+          <a className="navbar-brand" href="#">🥛 DailyDairy</a>
           <div className="navbar-nav ms-auto d-flex align-items-center">
             {user ? (
               <>
                 <span className="text-light me-3">
-                  🌾 Welcome, {user.name} ({user.role === 'delivery_person' ? `Dairy Route: ${user.house_number}` : `Farmhouse: ${user.house_number}`})
+                  🥛 Welcome, {user.name} ({user.role === 'delivery_person' ? `Route: ${user.house_number}` : `Address: ${user.house_number}`})
                 </span>
                 {user.role === 'resident' && (
                   <>
                     <button className="btn btn-outline-light me-2" onClick={() => setUserRole('resident')}>
-                      🏠 My Farm Dashboard
+                      🏠 My Dashboard
                     </button>
                     <button className="btn btn-outline-light me-2" onClick={() => setUserRole('delivery_person')}>
-                      🚚 Milk Delivery View
+                      🚚 Delivery Partner View
                     </button>
                   </>
                 )}
@@ -160,20 +160,20 @@ function App() {
               <DeliveryPersonDashboard user={user} />)
         ) : (
           <div className="text-center">
-            <h1>🐄 Welcome to MooFresh Farm 🌾</h1>
-            <p className="lead">Your daily farm-fresh dairy delivery straight from our pastures</p>
+            <h1>🥛 Welcome to DailyDairy 🚚</h1>
+            <p className="lead">Your daily dairy delivery service - Nandini, Arokya, Heritage & more brands delivered to your door</p>
             <div className="row mt-4">
               <div className="col-md-6 mb-3">
                 <div className="card h-100">
                   <div className="card-body text-center">
-                    <h5 className="card-title">🏠 For Farm Families</h5>
-                    <p className="card-text">Manage your daily fresh milk and pasture-raised dairy subscriptions</p>
+                    <h5 className="card-title">🏠 For Subscribers</h5>
+                    <p className="card-text">Manage your daily milk & dairy subscriptions from Nandini, Arokya, Heritage and other trusted brands</p>
                     <div className="d-grid gap-2">
                       <button className="btn btn-primary" onClick={() => setCurrentView('login')}>
                         Login
                       </button>
                       <button className="btn btn-outline-primary" onClick={() => setCurrentView('signup')}>
-                        🐄 Join Our Farm Family
+                        🥛 Subscribe Now
                       </button>
                     </div>
                   </div>
@@ -182,11 +182,11 @@ function App() {
               <div className="col-md-6 mb-3">
                 <div className="card h-100">
                   <div className="card-body text-center">
-                    <h5 className="card-title">🚚 For Dairy Farmers</h5>
-                    <p className="card-text">Join our farm-to-door network and manage your milk delivery routes</p>
+                    <h5 className="card-title">🚚 For Delivery Partners</h5>
+                    <p className="card-text">Join our delivery network and manage routes for Nandini, Arokya, Heritage & other dairy brands</p>
                     <div className="d-grid gap-2">
                       <button className="btn btn-success" onClick={() => setCurrentView('delivery-signup')}>
-                        🚛 Become a Farm Delivery Partner
+                        🚚 Become a Delivery Partner
                       </button>
                     </div>
                   </div>
