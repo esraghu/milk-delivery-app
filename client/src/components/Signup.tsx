@@ -53,7 +53,7 @@ const Signup: React.FC<SignupProps> = ({ onSignupSuccess, onCancel, onSwitchToLo
         <div className="col-md-6">
           <div className="card">
             <div className="card-header">
-              <h4 className="mb-0">Sign Up for DailyDoodh</h4>
+              <h4 className="mb-0">🐄 Join MooFresh Farm Family</h4>
             </div>
             <div className="card-body">
               {error && (
@@ -90,7 +90,7 @@ const Signup: React.FC<SignupProps> = ({ onSignupSuccess, onCancel, onSwitchToLo
                 </div>
 
                 <div className="mb-3">
-                  <label htmlFor="house_number" className="form-label">House Number *</label>
+                  <label htmlFor="house_number" className="form-label">🏠 Farmhouse Number *</label>
                   <input
                     type="text"
                     className="form-control"
@@ -98,7 +98,7 @@ const Signup: React.FC<SignupProps> = ({ onSignupSuccess, onCancel, onSwitchToLo
                     name="house_number"
                     value={formData.house_number}
                     onChange={handleInputChange}
-                    placeholder="e.g., A-101, 25B, Villa 12"
+                    placeholder="e.g., A-101, 25B, Farmhouse 12"
                     required
                   />
                 </div>
@@ -122,20 +122,20 @@ const Signup: React.FC<SignupProps> = ({ onSignupSuccess, onCancel, onSwitchToLo
                     className="btn btn-primary"
                     disabled={loading}
                   >
-                    {loading ? 'Creating Account...' : 'Sign Up'}
+                    {loading ? '🐄 Joining the farm...' : '🌾 Join Our Farm'}
                   </button>
                   
                   {onSwitchToLogin && (
                     <div className="text-center">
                       <small className="text-muted">
-                        Already have an account?{' '}
+                        Already part of our farm family?{' '}
                         <button 
                           type="button" 
                           className="btn btn-link p-0 text-decoration-underline"
                           onClick={onSwitchToLogin}
                           disabled={loading}
                         >
-                          Login here
+                          🌾 Enter the farm
                         </button>
                       </small>
                     </div>

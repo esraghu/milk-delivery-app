@@ -84,13 +84,13 @@ const DeliveryPersonDashboard: React.FC<DeliveryPersonDashboardProps> = ({ user 
             {user && (
                 <div className="card mb-4">
                     <div className="card-header">
-                        <h3>Delivery Partner Dashboard</h3>
+                        <h3>🚚 Farm Delivery Partner Dashboard</h3>
                     </div>
                     <div className="card-body">
                         <p className="mb-0">
-                            <strong>Partner:</strong> {user.name} | 
-                            <strong> ID:</strong> {user.house_number} | 
-                            <strong> Contact:</strong> {user.email}
+                            <strong>👩‍🌾 Dairy Farmer:</strong> {user.name} | 
+                            <strong>🚚 Route ID:</strong> {user.house_number} | 
+                            <strong>📞 Contact:</strong> {user.email}
                         </p>
                     </div>
                 </div>
@@ -98,7 +98,7 @@ const DeliveryPersonDashboard: React.FC<DeliveryPersonDashboardProps> = ({ user 
             
             <div className="card mb-4">
                 <div className="card-header">
-                    <h3>Daily Inventory Summary</h3>
+                    <h3>🥛 Daily Farm Fresh Inventory</h3>
                 </div>
                 <div className="card-body">
                     {totalInventory.length > 0 ? (
@@ -111,14 +111,14 @@ const DeliveryPersonDashboard: React.FC<DeliveryPersonDashboardProps> = ({ user 
                             ))}
                         </ul>
                     ) : (
-                        <p>No items to deliver today.</p>
+                        <p>🐄 No farm fresh items to deliver today.</p>
                     )}
                 </div>
             </div>
 
             <div className="card">
                 <div className="card-header">
-                    <h3>Delivery Route</h3>
+                    <h3>🌾 Farm-to-Door Route</h3>
                 </div>
                 <div className="card-body">
                     {deliveries.length > 0 ? (
@@ -151,7 +151,7 @@ const DeliveryPersonDashboard: React.FC<DeliveryPersonDashboardProps> = ({ user 
                             })}
                         </div>
                     ) : (
-                        <p>No deliveries scheduled for today.</p>
+                        <p>🌾 No farm deliveries scheduled for today.</p>
                     )}
                 </div>
             </div>

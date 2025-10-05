@@ -1,46 +1,137 @@
 body {
   background: url('./farm-background.jpg') no-repeat center center fixed;
   background-size: cover;
-  color: #333;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #2d3436;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  background-color: #f8f4e6; /* fallback cream color */
 }
 
 .App {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(252, 249, 240, 0.95); /* cream with transparency */
   min-height: 100vh;
   padding-bottom: 2rem;
+  border: 3px dashed #8b4513; /* saddle brown border */
 }
 
 .navbar {
-  background-color: #4a6b3b !important;
+  background-color: #8b4513 !important; /* saddle brown */
+  background-image: repeating-linear-gradient(
+    45deg,
+    #8b4513,
+    #8b4513 10px,
+    #a0522d 10px,
+    #a0522d 20px
+  ); /* barn wood pattern */
+  box-shadow: 0 4px 8px rgba(139, 69, 19, 0.3);
 }
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 6px 12px 0 rgba(139, 69, 19, 0.3);
   transition: 0.3s;
-  border-radius: 5px;
+  border-radius: 15px;
+  border: 3px solid #deb887; /* burlywood */
+  background-color: #fefdf8; /* off-white */
+  /* Removed cow pattern for cleaner look */
 }
 
 .card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 10px 20px 0 rgba(139, 69, 19, 0.4);
+  transform: translateY(-2px);
+  border-color: #cd853f; /* peru */
 }
 
 .btn-primary {
-  background-color: #5c8a4a;
-  border-color: #5c8a4a;
+  background-color: #8b4513; /* saddle brown */
+  border-color: #8b4513;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  border-radius: 20px;
 }
 
 .btn-primary:hover {
-  background-color: #4a6b3b;
-  border-color: #4a6b3b;
+  background-color: #a0522d; /* sienna */
+  border-color: #a0522d;
+  transform: scale(1.05);
 }
 
 .btn-success {
-  background-color: #8f9a7a;
-  border-color: #8f9a7a;
+  background-color: #228b22; /* forest green */
+  border-color: #228b22;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+  border-radius: 20px;
 }
 
 .btn-success:hover {
-  background-color: #7a856a;
-  border-color: #7a856a;
+  background-color: #32cd32; /* lime green */
+  border-color: #32cd32;
+  transform: scale(1.05);
+}
+
+/* Additional farm-themed styling */
+.navbar-brand {
+  font-size: 1.8rem !important;
+  font-weight: bold !important;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5) !important;
+}
+
+.card-header {
+  background-color: #deb887 !important; /* burlywood */
+  background-image: repeating-linear-gradient(
+    90deg,
+    #deb887,
+    #deb887 5px,
+    #d2b48c 5px,
+    #d2b48c 10px
+  ); /* wood grain effect */
+  border-bottom: 3px solid #8b4513 !important;
+  font-weight: bold !important;
+  color: #2d3436 !important;
+}
+
+.btn-outline-light {
+  border: 2px solid #f8f9fa !important;
+  font-weight: bold !important;
+  border-radius: 20px !important;
+}
+
+.btn-outline-light:hover {
+  background-color: #f8f9fa !important;
+  color: #8b4513 !important;
+  border-color: #f8f9fa !important;
+  transform: scale(1.05);
+}
+
+.btn-warning {
+  background-color: #ffd700 !important; /* gold */
+  border-color: #ffd700 !important;
+  color: #2d3436 !important;
+  font-weight: bold !important;
+  border-radius: 20px !important;
+}
+
+.btn-warning:hover {
+  background-color: #ffed4e !important;
+  border-color: #ffed4e !important;
+  transform: scale(1.05);
+}
+
+.form-control {
+  border: 2px solid #deb887 !important;
+  border-radius: 10px !important;
+}
+
+.form-control:focus {
+  border-color: #8b4513 !important;
+  box-shadow: 0 0 0 0.2rem rgba(139, 69, 19, 0.25) !important;
+}
+
+.table {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  border-radius: 10px !important;
+}
+
+.badge {
+  font-size: 0.8em !important;
+  border-radius: 15px !important;
 }

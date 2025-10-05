@@ -212,7 +212,7 @@ const ResidentDashboard: React.FC<ResidentDashboardProps> = ({ user }) => {
                 <div className="col-lg-6 mb-4">
                     <div className="card">
                         <div className="card-header">
-                            <h4>My Daily Subscription</h4>
+                            <h4>🥛 My Daily Farm Delivery</h4>
                         </div>
                         <div className="card-body">
                             <form onSubmit={handleSubscriptionSubmit}>
@@ -236,11 +236,11 @@ const ResidentDashboard: React.FC<ResidentDashboardProps> = ({ user }) => {
                                         </div>
                                     );
                                 })}
-                                <button type="submit" className="btn btn-primary">Update Subscription</button>
+                                <button type="submit" className="btn btn-primary">🐄 Update Farm Delivery</button>
                             </form>
                         </div>
                         <div className="card-footer">
-                            <h6>Current Subscription</h6>
+                            <h6>🌾 Current Farm Delivery Plan</h6>
                             {subscription && subscription.items.length > 0 ? (
                                 <ul className="list-group list-group-flush">
                                     {subscription.items.map((item: any) => {
@@ -254,7 +254,7 @@ const ResidentDashboard: React.FC<ResidentDashboardProps> = ({ user }) => {
                                     })}
                                 </ul>
                             ) : (
-                                <small className="text-muted">No active subscription</small>
+                                <small className="text-muted">🐄 No active farm delivery plan</small>
                             )}
                         </div>
                     </div>
@@ -264,12 +264,12 @@ const ResidentDashboard: React.FC<ResidentDashboardProps> = ({ user }) => {
                 <div className="col-lg-6 mb-4">
                     <div className="card">
                         <div className="card-header">
-                            <h4>Place Ad-hoc Order</h4>
+                            <h4>🥛 Special Farm Order</h4>
                         </div>
                         <div className="card-body">
                             <form onSubmit={handleAdhocOrderSubmit}>
                                 <div className="mb-3">
-                                    <label htmlFor="order_date" className="form-label">Delivery Date</label>
+                                    <label htmlFor="order_date" className="form-label">📅 Farm Delivery Date</label>
                                     <input
                                         type="date"
                                         className="form-control"
@@ -296,7 +296,7 @@ const ResidentDashboard: React.FC<ResidentDashboardProps> = ({ user }) => {
                                         </div>
                                     </div>
                                 ))}
-                                <button type="submit" className="btn btn-success">Place Order</button>
+                                <button type="submit" className="btn btn-success">🍾 Order Fresh from Farm</button>
                             </form>
                         </div>
                     </div>
@@ -308,7 +308,7 @@ const ResidentDashboard: React.FC<ResidentDashboardProps> = ({ user }) => {
                 <div className="col-lg-6 mb-4">
                     <div className="card">
                         <div className="card-header">
-                            <h4>Vacation Periods</h4>
+                            <h4>🏡 Away from the Farmhouse</h4>
                         </div>
                         <div className="card-body">
                             <form onSubmit={handleVacationSubmit}>
@@ -332,12 +332,12 @@ const ResidentDashboard: React.FC<ResidentDashboardProps> = ({ user }) => {
                                         required
                                     />
                                 </div>
-                                <button type="submit" className="btn btn-warning">Add Vacation Period</button>
+                                <button type="submit" className="btn btn-warning">✈️ Add Away Period</button>
                             </form>
                             
                             {vacations.length > 0 && (
                                 <div className="mt-3">
-                                    <h6>Upcoming Vacations</h6>
+                                    <h6>🌴 Upcoming Away Periods</h6>
                                     <ul className="list-group list-group-flush">
                                         {vacations.map((vacation: any) => (
                                             <li key={vacation.id} className="list-group-item p-2">
@@ -355,7 +355,7 @@ const ResidentDashboard: React.FC<ResidentDashboardProps> = ({ user }) => {
                 <div className="col-lg-6 mb-4">
                     <div className="card">
                         <div className="card-header">
-                            <h4>Order History</h4>
+                            <h4>📜 Farm Delivery History</h4>
                         </div>
                         <div className="card-body">
                             {orders.length > 0 ? (
@@ -375,7 +375,7 @@ const ResidentDashboard: React.FC<ResidentDashboardProps> = ({ user }) => {
                                                     <td>{order.date}</td>
                                                     <td>
                                                         <span className={`badge ${order.is_adhoc ? 'bg-info' : 'bg-primary'}`}>
-                                                            {order.is_adhoc ? 'Ad-hoc' : 'Subscription'}
+                                                            {order.is_adhoc ? '🍾 Special' : '🐄 Daily'}
                                                         </span>
                                                     </td>
                                                     <td>
@@ -391,7 +391,7 @@ const ResidentDashboard: React.FC<ResidentDashboardProps> = ({ user }) => {
                                     </table>
                                 </div>
                             ) : (
-                                <p className="text-muted">No orders yet</p>
+                                <p className="text-muted">🍾 No farm deliveries yet</p>
                             )}
                         </div>
                     </div>

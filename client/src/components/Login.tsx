@@ -37,7 +37,7 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess, onCancel, onSwitchToSignu
         <div className="col-md-6">
           <div className="card">
             <div className="card-header">
-              <h4 className="mb-0">Login to DailyDoodh</h4>
+              <h4 className="mb-0">🐄 Login to MooFresh Farm</h4>
             </div>
             <div className="card-body">
               {error && (
@@ -70,19 +70,19 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess, onCancel, onSwitchToSignu
                     className="btn btn-primary"
                     disabled={loading || !email.trim()}
                   >
-                    {loading ? 'Logging in...' : 'Login'}
+                    {loading ? '🐄 Entering the farm...' : '🌾 Enter Farm'}
                   </button>
                   
                   <div className="text-center">
                     <small className="text-muted">
-                      Don't have an account?{' '}
+                      New to the farm?{' '}
                       <button 
                         type="button" 
                         className="btn btn-link p-0 text-decoration-underline"
                         onClick={onSwitchToSignup}
                         disabled={loading}
                       >
-                        Sign up here
+                        🐄 Join our farm family
                       </button>
                     </small>
                   </div>
@@ -93,7 +93,7 @@ const Login: React.FC<LoginProps> = ({ onLoginSuccess, onCancel, onSwitchToSignu
                     onClick={onCancel}
                     disabled={loading}
                   >
-                    Back to Home
+                    🏠 Back to Farm
                   </button>
                 </div>
               </form>
